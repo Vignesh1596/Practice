@@ -1,0 +1,15 @@
+id,area,title,steps,expected,severity
+TC-001,Auth,Register valid user,"Open /register; fill all mandatory fields; click Register","User account created and redirected to Contact List",Critical
+TC-002,Auth,Register invalid email,"Open /register; enter invalid email; click Register","Validation error displayed for email field",Major
+TC-003,Auth,Register weak password,"Enter weak password; click Register","Password strength error displayed",Major
+TC-004,Auth,Login with valid credentials,"Open /login; enter valid email & password; click Login","User successfully logged in and navigated to /contacts",Critical
+TC-005,Auth,Login with invalid password,"Enter wrong password; click Login","Error message displayed",Major
+TC-006,Auth,Unauthorized access to contacts page,"Open /contacts without logging in","Redirected to /login page",Critical
+TC-007,Contacts,Add contact with valid data,"Login; go to Add Contact; fill form with valid details; click Save","Contact added and visible in list",Critical
+TC-008,Contacts,Add contact invalid email,"Enter an invalid email in Add Contact form","Email validation error displayed",Major
+TC-009,Contacts,Edit existing contact,"Login; create a contact; edit fields; Save","Contact details updated successfully",Major
+TC-010,Contacts,Delete a contact,"Login; add contact; click Delete; confirm popup","Contact removed from list",Critical
+TC-011,Contacts,View contact details,"Login; click on any contact","Selected contact details displayed",Minor
+TC-012,Contacts,Search contact (if available),"Enter name in search box (if present)","List filtered based on search",Minor
+TC-013,Security,Direct URL access to contact details,"Open /contact-details/:id without
+    
